@@ -28,3 +28,6 @@ plink \
 
 # 2) make genotype matrix
 cat ${GENOTYPE}.pruned.raw | cut -d " " -f7- | awk 'NR>1{print}' > ${GENOTYPE}.pruned.geno.>
+
+chmod +x 02_run_dr.py
+./02_run_dr.py ${GENOTYPE}
